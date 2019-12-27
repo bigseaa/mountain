@@ -13,6 +13,8 @@
         <module>mountain-gateway</module>
         <module>mountain-test</module>
         <module>mountain-file</module>
+        <module>mountain-common</module>
+        <module>mountain-demo</module>
     </modules>
 
     <parent>

@@ -7,14 +7,20 @@
         <sourceOutputDir name="target/generated-sources/annotations" />
         <sourceTestOutputDir name="target/generated-test-sources/test-annotations" />
         <outputRelativeToContentRoot value="true" />
+        <module name="mountain-common" />
+        <module name="mountain-demo-interface" />
+        <module name="mountain-demo-service" />
         <module name="mountain-eureka" />
         <module name="mountain-file" />
         <module name="mountain-gateway" />
-        <module name="mountain-test" />
+        <module name="mountain-test-interface" />
+        <module name="mountain-test-service" />
       </profile>
     </annotationProcessing>
     <bytecodeTargetLevel>
+      <module name="mountain-auth" target="1.8" />
       <module name="mountain-oss" target="1.8" />
+      <module name="mountain-test" target="1.8" />
     </bytecodeTargetLevel>
   </component>
 </project>
