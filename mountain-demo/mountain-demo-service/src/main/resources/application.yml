@@ -1,8 +1,8 @@
 server:
-  port: 8088
+  port: 8089
 spring:
   application:
-    name: test-service
+    name: demo-service
   redis:
     host: 127.0.0.1
 eureka:
