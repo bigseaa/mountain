@@ -12,8 +12,6 @@
         <module>mountain-eureka</module>
         <module>mountain-gateway</module>
         <module>mountain-test</module>
-        <module>mountain-oss</module>
-        <module>mountain-oss</module>
         <module>mountain-file</module>
     </modules>
 
