@@ -13,6 +13,7 @@
         <module name="mountain-eureka" />
         <module name="mountain-file" />
         <module name="mountain-gateway" />
+        <module name="mountain-ums" />
       </profile>
     </annotationProcessing>
     <bytecodeTargetLevel>

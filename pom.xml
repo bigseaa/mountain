@@ -14,6 +14,7 @@
         <module>mountain-file</module>
         <module>mountain-common</module>
         <module>mountain-demo</module>
+        <module>mountain-ums</module>
     </modules>
 
     <parent>
