@@ -18,7 +18,7 @@ public class DemoController {
     @Autowired
     private DemoService demoService;
 
-    @GetMapping("getDemoDomain")
+    @GetMapping("/getDemoDomain")
     public Result getDemoDomain() {
         List<DemoDomain> demoDomainList = demoService.getDemoDomainList();
         PageResult<DemoDomain> pageResult = new PageResult<>();
@@ -26,6 +26,14 @@ public class DemoController {
         pageResult.setTotal(demoDomainList.size());
         Result result = Result.SUCCESS();
         result.setData(pageResult);
+        return result;
+    }
+
+    @GetMapping("/getDemoById")
+    public Result getDemoById() {
+        DemoDomain demoDomain = demoService.getDemoDomainById(1L);
+        Result result = Result.SUCCESS();
+        result.setData(demoDomain);
         return result;
     }
 }

@@ -6,4 +6,6 @@ import java.util.List;
 
 public interface DemoService {
     List<DemoDomain> getDemoDomainList();
+
+    DemoDomain getDemoDomainById(Long id);
 }

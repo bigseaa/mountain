@@ -12,5 +12,17 @@
     <groupId>com.sea.service</groupId>
     <artifactId>mountain-demo-interface</artifactId>
 
+    <dependencies>
+        <dependency>
+            <groupId>javax.persistence</groupId>
+            <artifactId>persistence-api</artifactId>
+            <version>1.0</version>
+        </dependency>
+        <dependency>
+            <groupId>org.springframework.data</groupId>
+            <artifactId>spring-data-jpa</artifactId>
+        </dependency>
+    </dependencies>
+
 
 </project>
