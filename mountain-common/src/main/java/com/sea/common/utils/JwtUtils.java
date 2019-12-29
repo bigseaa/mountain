@@ -27,7 +27,9 @@ public class JwtUtils {
         JwtBuilder jwtBuilder = Jwts.builder().setId("1").setSubject("张三")
             .setIssuedAt(new Date())
             .signWith(SignatureAlgorithm.HS256, key);
-        jwtBuilder.setClaims(map);
+        for(Map.Entry<String, Object> entry : map.entrySet()) {
+            jwtBuilder.claim(entry.getKey(), entry.getValue());
+        }
         jwtBuilder.setExpiration(new Date(exp));
         return jwtBuilder.compact();
     }

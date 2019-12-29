@@ -1,14 +1,16 @@
 package com.sea.ums.domain;
 
-import lombok.AllArgsConstructor;
-import lombok.Data;
-import lombok.NoArgsConstructor;
+import com.fasterxml.jackson.annotation.JsonIgnore;
+import lombok.*;
 
 import javax.persistence.*;
 import java.util.Date;
+import java.util.HashSet;
+import java.util.Set;
 
 @Entity
-@Data
+@Getter
+@Setter
 @Table(name = "permission")
 @AllArgsConstructor
 @NoArgsConstructor
@@ -43,4 +45,7 @@ public class Permission {
      */
     private Date updateTime;
 
+    @JsonIgnore
+    @ManyToMany(mappedBy = "permissions")
+    private Set<Role> roles = new HashSet<>(0);  // 角色与权限，多对多
 }

@@ -1,7 +1,8 @@
 package com.sea.ums.domain;
 
 import com.fasterxml.jackson.annotation.JsonIgnore;
-import lombok.Data;
+import lombok.Getter;
+import lombok.Setter;
 
 import javax.persistence.*;
 import java.util.Date;
@@ -9,7 +10,8 @@ import java.util.HashSet;
 import java.util.Set;
 
 @Entity
-@Data
+@Getter
+@Setter
 @Table(name = "user")
 public class User {
     /**
@@ -46,5 +48,5 @@ public class User {
     @ManyToMany
     @JoinTable(name="user_role", joinColumns = {@JoinColumn(name = "user_id", referencedColumnName = "id")},
             inverseJoinColumns = {@JoinColumn(name = "role_id", referencedColumnName = "id")})
-    private Set<Role> roles = new HashSet<>();  // 用户与角色，多对多
+    private Set<Role> roles = new HashSet<>(0);  // 用户与角色，多对多
 }
